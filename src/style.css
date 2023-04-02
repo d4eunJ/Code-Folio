@@ -1,0 +1,178 @@
+/* 전체 스타일링 */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+  
+  /* 헤더 스타일링 */
+ header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 0 20px;
+    background-color: #fff;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+ }
+  
+  .icon{
+    display: flex;
+    align-items: center;
+  }
+
+.icon img {
+    height: 40px;
+
+}
+  
+.icon a {
+    display: inline-block;
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+    margin-left: 10px;
+}
+  
+.user-actions button {
+    margin-left: 10px;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 15px;
+    background-color: #fff;
+    color: #444;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+  
+  .signup-btn {
+    background-color: #5cb85c;
+  }
+  
+  /* 본문 스타일링 */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
+}
+  
+.intro h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-top: 80px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+  
+.intro p {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 50px;
+    text-align: center;
+    color: #ababab;
+}
+  
+.join-btn {
+    border: none;
+    font-size: 22px;
+    font-weight: bold;
+    background-color: #000;
+    color: #fff;
+    border-radius: 7px;
+    padding:15px;
+    margin-bottom: 20px;
+}
+
+.sns-login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+  
+.sns-login p {
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+  
+.sns-login button {
+    background-color: transparent;
+    border: none;
+    font-size: 14px;
+    color: #ababab;
+    text-decoration: underline;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+  
+.sns-login button:last-child {
+    margin-bottom: 0;
+}
+
+.signup{
+    width: 400px;
+    margin: 0 auto;
+    height: inherit;
+    text-align: left;
+}
+
+.signup h1{
+    font-size: 36px;
+    font-weight: bold;
+    margin:70px auto 40px 20px;
+}
+
+.signup form div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.signup  input,
+  button {
+    font-size: 14px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: rgba(0, 0, 0, 0.015);
+    margin-left: 10px;
+}
+ 
+.signup  button[id$="-check"] {
+    margin-left: 5px;
+    border: 1px solid #ccc;
+}
+
+.signup input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+
+.signup label{
+  width: 80px;
+}
+
+.checkbox-group label{
+  width:400px;
+}
+
+.signup input[type="text"],
+input[type="email"],
+input[type="password"],
+input[ type="date"] {
+  width: 200px;
+}
+
+.signup button[type="submit"]{
+  border: none;
+  font-size: 22px;
+  font-weight: bold;
+  background-color: #000;
+  color: #fff;
+  border-radius: 7px;
+  padding:15px 40px  15px 40px;
+  margin: 30px 120px auto 120px;
+}
