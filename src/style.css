@@ -224,8 +224,8 @@ main {
 
 
 .signup label{
-  width: 80px;
-  padding-left: 20px;
+  width: 100px;
+  padding-left: 10px;
 }
 
 .checkbox-group label{
@@ -236,7 +236,7 @@ main {
 input[type="email"],
 input[type="password"],
 input[ type="date"] {
-  width: 220px;
+  width: 200px;
 }
 
 .signup button[type="submit"]{
@@ -321,7 +321,7 @@ button {
 
 .id-login input[type="text"],
 input[type="password"] {
-  width: 220px;
+  width: 200px;
 }
 
 .id-login button[type="submit"]{
