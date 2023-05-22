@@ -1,0 +1,24 @@
+.slides li{
+  list-style-type: none;
+}
+
+.slides a img{
+  width: 640px;
+  height: 360px;
+}
+
+.cruitStudy a img{
+  width: 150px;
+}
+
+.cruitStudy p{
+  margin: 0;
+}
+
+.myStudy a img{
+  width: 150px;
+}
+
+.myStudy p{
+  margin: 0;
+}
