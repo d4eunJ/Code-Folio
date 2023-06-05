@@ -10,7 +10,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-public class StudyPost {
+public class StudyBoard {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer postId;
