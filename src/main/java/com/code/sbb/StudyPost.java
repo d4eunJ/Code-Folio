@@ -3,6 +3,7 @@ package com.code.sbb;
 
 import java.time.LocalDateTime;
 import java.util.List;
+
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -10,7 +11,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-public class StudyBoard {
+public class StudyPost {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer postId;
@@ -23,9 +24,12 @@ public class StudyBoard {
     private LocalDateTime postCreateDate;
 
     private int postViews;
+    private String author;
+    private int commentCount;
     @ElementCollection
     private List<String> postHashtags;
 
-//    @ManyToOne
-//    private Question question;
+    @OneToMany(mappedBy = "studyboard", cascade = CascadeType.REMOVE)
+    private List<StudyPostComment> commentlist;
+
 }

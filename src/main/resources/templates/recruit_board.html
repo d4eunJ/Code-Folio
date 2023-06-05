@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="kr">
+<html lang="kr" xmlns:th="http://www.w3.org/1999/xhtml">
 
 <head>
     <meta charset="utf-8">
@@ -121,7 +121,12 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <!-- 여기에 게시글 목록 추가 -->
+                    <tr th:each="studypost : ${studyboard}">>
+                        <td>
+                            <a th:href="@{|/studypost/detail/${studypost.Postid}|}" th:text="${studypost.PostTitle}"></a>
+                        </td>
+                        <td th:text="${studypost.PostCreateDate}"></td>
+                    </tr>
                     </tbody>
                 </table>
             </div>
