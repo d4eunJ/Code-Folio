@@ -9,86 +9,22 @@
           integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 </head>
 
-<body>
-<form th:action="@{/user/login}" method="post">
-    <div th:if="${param.error}">
-        <div class="alert alert-danger">
-            이메일 또는 비밀번호를 확인해 주세요.
-        </div>
-    </div>
-    <div class="container text-center">
-
-        <header>
-            <nav class="navbar lh-1 py-2">
-                <div class="container-fluid">
-                    <ul class="justify-content-start">
-                        <a class="navbar-brand fw-bold" href="/">
-                            <img src="\img\icon.png" alt="Logo" width="40px" class="d-inline-block">
-                            CODE-FOLIO
-                        </a>
-                    </ul>
-                    <ul class="nav justify-content-end fw-semibold">
-                        <li class="nav-item">
-                            <a class="nav-link text-secondary" href="/user/login">로그인</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-secondary" href="/user/signup">회원가입</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </header>
-    </div>
-    <div class="container">
-        <div id="loginBtnGroup">
-            <div class="d-grid gap-4 col-6 mx-auto"><br>
-                <button type="button" class="email btn btn-outline-dark" onclick="showLoginForm()">이메일
-                    로그인</button>
-                <button type="button" class="btn btn-outline-warning" href="#">카카오로 로그인</button>
-                <button type="button" class="btn btn-outline-danger" href="#">구글로 로그인</button>
-                <button type="button" class="btn btn-outline-success" href="#">깃허브로 로그인</button>
-                <div class="container text-center">
-                    <a class="text-dark text-decoration-none" href="signup.html">아직 회원이 아니라면 ▶</a>
-                </div>
+    <form th:action="@{/user/login}" method="post">
+        <div th:if="${param.error}">
+            <div class="alert alert-danger">
+                아이디 또는 비밀번호를 확인해 주세요.
             </div>
         </div>
+        <div class="mb-3">
+            <label for="username" class="form-label">아이디</label>
+            <input type="text" name="username" id="username" class="form-control">
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label">비밀번호</label>
+            <input type="password" name="password" id="password" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-primary">로그인</button>
 
-        <div id="loginForm" style="display: none;">
-            <!--            <form onsubmit="login()">-->
-            <form th:action="@{/user/login}" method="post">
-            <div class="row">
-                <div class="col">
-                </div>
-                <div class="col-6"><br><br>
-                    <label for="inputEmail" class="form-label">이메일</label>
-                    <div class="form-floating mb-3">
-                        <input type="email" class="form-control" name="email" id="inputEmail" placeholder="name@example.com"
-                               required>
-                        <label for="inputEmail" class="text-secondary">이메일</label>
-                    </div>
-                    <label for="inputPassword" class="form-label">비밀번호</label>
-                    <div class="form-floating mb-3">
-                        <input type="password" class="form-control" name="password" id="inputPassword" placeholder="Password"
-                               required>
-                        <label for="inputPassword" class="text-secondary">비밀번호</label>
-                    </div>
-                    <div class="d-grid gap-2"><br>
-                        <button type="submit" class="btn btn-dark btn-lg fw-bold">로그인</button>
-                    </div>
-                    <p class="back text-dark text-decoration-none user-select-none" onclick="hideLoginForm()">◀ 뒤로가기
-                    </p>
-                </div>
-                <div class="col">
-                </div>
-            </div>
-</form>
+    </form>
 </div>
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-        crossorigin="anonymous"></script>
-<script src="\script.js"></script>
-</body>
-
 </html>
