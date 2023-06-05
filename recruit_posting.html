@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Code-Folio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="\style.css">
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container text-center">
+        <header>
+            <!-- 상단 네비게이션 바 -->
+            <nav class="navbar lh-1 py-2">
+                <div class="container-fluid">
+                    <ul class="justify-content-start">
+                        <!-- 로고 및 메인 메뉴 -->
+                        <a class="navbar-brand fw-bold" href="/feed">
+                            <img src="\img\icon.png" alt="Logo" width="40px" class="d-inline-block">
+                            CODE-FOLIO
+                        </a>
+                        <a class="navbar-brand fw-bold" href="/studyfeed">
+                            STUDY
+                        </a>
+                    </ul>
+
+                    <ul class="nav justify-content-end fw-semibold">
+                        <!-- 사용자 정보 및 알림 -->
+                        <li class="nav-item">
+                            <p class="nav-link text-secondary" id="userID">USER</p>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#">
+                                <img src="\img\notification.png" alt="notification" width="28px"
+                                    style="margin-right: 10px;">
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <!-- 사용자 프로필 드롭다운 메뉴 -->
+                            <a class="dropdown-toggle-split" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <img src="\img\none-profile.png" alt="profile" id="profileImage" width="30px">
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">마이 페이지</a></li>
+                                <li><a class="dropdown-item" href="#">정보 수정</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">로그아웃</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+    </div>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col">
+                <h1>스터디 모집</h1>
+                <hr>
+                <form>
+                    <div class="row mb-3">
+                        <div class="col-2">
+                            <label for="study" class="form-label">스터디 선택</label>
+                            <select class="form-select" id="study">
+                                <option selected>스터디 선택</option>
+                                <option value="mystudy1">스터디1</option>
+                                <option value="mystudy2">스터디2</option>
+                                <option value="mystudy3">스터디3</option>
+                            </select>
+                        </div>
+                        <div class="col-10">
+                            <label for="title" class="form-label">제목</label>
+                            <input type="text" class="form-control" id="title" placeholder="게시글 제목을 입력하세요">
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col">
+                            <label for="recruitmentPeriod" class="form-label">모집 기한</label>
+                            <input type="datetime-local" class="form-control" id="recruitmentPeriod">
+                        </div>
+                        <div class="col">
+                            <label for="numOfMembers" class="form-label">모집 인원</label>
+                            <input type="number" class="form-control" id="numOfMembers" placeholder="모집 인원을 입력하세요">
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="content" class="form-label">내용</label>
+                        <div id="editor" style="height: 300px;">
+                            <small class="form-text text-muted"><br>모집 목적:<br><br>활동 기간:<br><br>내용 작성:
+                            </small>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="hashtags" class="form-label">해시태그</label>
+                        <input type="text" class="form-control" id="hashtags"
+                            placeholder="해시태그를 입력하세요 (띄어쓰기로 태그를 구분하세요)">
+                    </div>
+                    <button type="submit" class="btn btn-outline-dark float-end">게시글 작성</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-zuHGB1rTMzCD2wf2dEPI9XT0Wrl3Yp9vu5hBYUAdcqQ9PihDIi/i1KdWJ6RJm/3J"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+    <script>
+        var quill = new Quill('#editor', {
+            theme: 'snow'
+        });
+    </script>
+</body>
+
+</html>
